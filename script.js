@@ -3,14 +3,28 @@ const quoteText = document.getElementById("quote");
 const quoteAuthor = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
+const loader = document.getElementById("loader");
 
 let apiQuotes = [];
 
+// Show Loading
+function loadingLoader() {
+  loader.hidden = false;
+  quoteContainer.hidden = true;
+}
+
+// hide Loading
+function completeLoader() {
+  quoteContainer.hidden = false;
+  loader.hidden = true;
+}
+
 // show single Quote
 function newQuote() {
+  loadingLoader();
   // pick a random quote from apiQuote array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-  console.log(quote);
+  // console.log(quote);
   // Checl if author field is blank and replace it with unknow
   if (!quote.author) {
     quoteAuthor.textContent = "Unknown";
@@ -22,11 +36,14 @@ function newQuote() {
   } else {
     quoteText.classList.remove("long-quote");
   }
+  // Set Quote and hide loader
   quoteText.textContent = quote.text;
+  completeLoader();
 }
 
 // Get Quotes from API
 async function getQuotes() {
+  loadingLoader();
   const apiUrl = "https://type.fit/api/quotes";
   // for async I nedd to know if there is problems with fetching that needs try-catch
   try {
@@ -57,3 +74,4 @@ newQuoteBtn.addEventListener("click", newQuote);
 
 // On Load
 getQuotes();
+// loadingLoader()

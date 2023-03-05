@@ -50,5 +50,5 @@ Math.random() * apiQuotes.length
 - [x] on longer quotes the font-size will be smaller with .long-quote with quote.text.length
 - [x] Twitter-Button start working with a fn tweetQuote() and window.open()
 - [x] add Eventlisteners for both Buttons
-- [ ] animation loader from w3school
+- [ ] animation loader from w3school by creating a loading-fn and a complete-fn
 
