@@ -29,11 +29,24 @@ const = value never changing
     const apiURL = "https://type.fit/api/quotes";
 let = to be able to change the value in a block
 
-
-
+- [x] Videso das erste Mal in Abschnitten schauen und mitdenken.
+Heropatterns ist eine Webseite für SVGs Backgrounds
 
 
 ## 2023-03-05 15:30
 
-- [ ] Videso das erste Mal in Abschnitten schauen und mitdenken.
-Heropatterns ist eine Webseite für SVGs Backgrounds
+- [x] get Quotes from the API "fn getQuotes()"
+- [x] fn getQoutes() muss be async because I had to pull a request and to wait for a response in a try-catch()
+- [x] I need to show only one single quote form apiQuotes-Array with newQuote()
+- [x] newQuote show mo only one random quote from the list apiQuotes[Math.random]
+- [x] Math.random needs the Math.floor() to give me the largest number less or equal to the given number. The given number is: 
+```javascript
+Math.random() * apiQuotes.length
+```
+- [ ] populate the UI with dynamic html 
+- [ ] target the elements to take the user inputs getElementById()
+- [ ] replace the html textContent with the quote.text and quote.author
+- [ ] if-condition for the unkown quote.author 
+- [ ] on longer quotes the font-size will be smaller with .long-quote with quote.text.length
+- [ ] 
+
