@@ -43,10 +43,12 @@ Heropatterns ist eine Webseite für SVGs Backgrounds
 ```javascript
 Math.random() * apiQuotes.length
 ```
-- [ ] populate the UI with dynamic html 
-- [ ] target the elements to take the user inputs getElementById()
-- [ ] replace the html textContent with the quote.text and quote.author
-- [ ] if-condition for the unkown quote.author 
-- [ ] on longer quotes the font-size will be smaller with .long-quote with quote.text.length
-- [ ] 
+- [x] populate the UI with dynamic html 
+- [x] target the elements to take the user inputs getElementById()
+- [x] replace the html textContent with the quote.text and quote.author
+- [x] if-condition for the unkown quote.author 
+- [x] on longer quotes the font-size will be smaller with .long-quote with quote.text.length
+- [x] Twitter-Button start working with a fn tweetQuote() and window.open()
+- [x] add Eventlisteners for both Buttons
+- [ ] animation loader from w3school
 
